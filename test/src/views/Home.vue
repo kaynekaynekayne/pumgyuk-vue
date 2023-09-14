@@ -16,6 +16,15 @@
                 input1:"",
             };
         },
+        //
+        watch:{
+            input1(){   
+                //데이터를 가지고 function 형식으로 만들 수 있음
+                //데이터가 변경되는 걸 캐치해서 알 수 있음
+                //(모니터링)
+                console.log(this.input1)
+            }
+        },
         methods:{
             getData(){
                 alert(this.input1);
@@ -24,6 +33,7 @@
                 this.input1="12345";
             }
         },
+        //라이프 사이클
         beforeCreate(){
             console.log("beforeCreate")
         },
