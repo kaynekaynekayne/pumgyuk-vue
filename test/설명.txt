@@ -8,5 +8,51 @@
 => http://localhost:8080/에서 접근 가능
 => 프로젝트가 정상적으로 만들어짐
 
+
 라우터 설치 (뷰에서 웹페이지 간의 이동 위함)
-6. 
+6. npm i vue-router --save
+
+뷰 라우터 에러 관련
+https://velog.io/@uxolrv/%EC%97%90%EB%9F%AC-%EC%9D%BC%EC%A7%80-vue-router-%EC%84%A4%EC%B9%98-%EC%97%90%EB%9F%AC
+
+6-1. npm install vue-router@3 (vue2 지원)
+
+
+부트스트랩뷰 (공식문서 get started에 나와있음)
+7. npm install vue bootstrap bootstrap-vue
+8. main.js에 아래 코드 추가
+
+
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
+// Import Bootstrap and BootstrapVue CSS files (order is important)
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+// Make BootstrapVue available throughout your project
+Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
+
+
+9. bootstrapvue 공홈->Components->Navbar
+코드 복붙해서 test/src/layout/Header.vue의
+<template> 부분 안에 붙여넣기
+
+* .vue는 <template> <script> <style>로 나뉨
+
+
+10. App.vue 건드림
+
+에러관련
+Component name "header" should always be multi-word
+https://velog.io/@uxolrv/%EC%97%90%EB%9F%AC-%EC%9D%BC%EC%A7%80-Component-name-should-always-be-multi-word
+
+
+11. src/views/Home.vue 만듦
+12. src/views/About.vue 만듦
+
+13. 페이지 이동 위해 router.js 만듦
+
+
+
