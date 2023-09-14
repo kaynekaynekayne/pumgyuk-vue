@@ -1,0 +1,12 @@
+순서
+
+1. npm i -g @vue/cli
+2. vue create 프로젝트명 => 전체적인 폴더 생김 (node_modules, public, src, package.json 등등)
+3. npm run serve => start 할 수 있음
+4. cd 프로젝트명
+5. npm run serve
+=> http://localhost:8080/에서 접근 가능
+=> 프로젝트가 정상적으로 만들어짐
+
+라우터 설치 (뷰에서 웹페이지 간의 이동 위함)
+6. 
