@@ -47,12 +47,31 @@ Vue.use(IconsPlugin)
 에러관련
 Component name "header" should always be multi-word
 https://velog.io/@uxolrv/%EC%97%90%EB%9F%AC-%EC%9D%BC%EC%A7%80-Component-name-should-always-be-multi-word
+https://doctorson0309.tistory.com/994
+->vue.config.js에 lintOnSave : false를 추가하고 서버 재가동
 
+Do not use built-in or reserved HTML elements as component id: header
+https://programjy.tistory.com/57
+->일단 export default 안에 있는 내용 주석 처리
+
+Error in render: "TypeError: Cannot read properties of undefined (reading 'matched')
+https://velog.io/@k_jihye92/Error-in-render-TypeError-Cannot-read-properties-of-undefined-reading-matched
+->&***아직 해결 안됨
 
 11. src/views/Home.vue 만듦
 12. src/views/About.vue 만듦
 
-13. 페이지 이동 위해 router.js 만듦
+13. 페이지 이동 위해 router.js 만들고 
+13-1. router 써야 되니까 main.js에 선언
+
+import router from './router';
+
+new Vue({
+  router,
+  render: h => h(App),
+}).$mount('#app')
+
+
 
 
 
