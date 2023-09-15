@@ -48,7 +48,15 @@ Vue.use(IconsPlugin)
 Component name "header" should always be multi-word
 https://velog.io/@uxolrv/%EC%97%90%EB%9F%AC-%EC%9D%BC%EC%A7%80-Component-name-should-always-be-multi-word
 https://doctorson0309.tistory.com/994
-->vue.config.js에 lintOnSave : false를 추가하고 서버 재가동
+->vue.config.js에 lintOnSave : false를 추가하고 서버 재가동 하라고
+
+해결😐
+<script>
+    export default {
+        name:"vue-home" <- 추가. name:'vue-about'도 마찬가지
+    }
+</script>
+
 
 Do not use built-in or reserved HTML elements as component id: header
 https://programjy.tistory.com/57
@@ -56,7 +64,23 @@ https://programjy.tistory.com/57
 
 Error in render: "TypeError: Cannot read properties of undefined (reading 'matched')
 https://velog.io/@k_jihye92/Error-in-render-TypeError-Cannot-read-properties-of-undefined-reading-matched
-->&***아직 해결 안됨
+
+해결😐
+const router=new VueRouter({
+    mode:"history",
+    routes:[
+        {
+            path:'/', component:Home
+        },
+        {
+            path:'/about', component:About
+        }
+    ]
+})
+export default router;
+
+// 그 전에는 export derfault router 안 해줬었음
+
 
 11. src/views/Home.vue 만듦
 12. src/views/About.vue 만듦
@@ -69,9 +93,5 @@ import router from './router';
 new Vue({
   router,
   render: h => h(App),
+
 }).$mount('#app')
-
-
-
-
-
